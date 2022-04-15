@@ -1,11 +1,12 @@
 package com.bridgelabz;
 
 public class CabInvoiceGenerator {
+
+    RideRepository rideRepository = new RideRepository();
     private final int COST_PER_KM = 10;
     private final int COST_PER_MINUTE = 1;
     public int MIN_FARE = 5;
     double totalFare;
-    RideRepository rideRepository = new RideRepository();
 
     public double calculateFare(double distance, int time) {
 
@@ -22,6 +23,7 @@ public class CabInvoiceGenerator {
 
         return totalFare;
     }
+
     public int numberOfRides(Rides[] rides) {
         return rides.length;
     }
