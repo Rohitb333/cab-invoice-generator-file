@@ -21,4 +21,15 @@ public class CabInvoiceGenerator {
 
         return totalFare;
     }
+    public int numberOfRides(Rides[] rides) {
+        return rides.length;
+    }
+
+    public double calculateAverageFarePerRide(Rides[] rides) {
+        CabInvoiceGenerator cabInvoiceGenerator = new CabInvoiceGenerator();
+        double totalFare = cabInvoiceGenerator.CalculateFare(rides);
+        double numberOfRides = rides.length;
+        double averageFare = totalFare/numberOfRides;
+        return averageFare;
+    }
 }

@@ -14,4 +14,5 @@ private final double costpermin;
 public double calcCostOfCabRide(Rides ride) {
         return ride.distance * costperkm + ride.time * costpermin;
         }
-        }
+
+ }
