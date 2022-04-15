@@ -18,4 +18,14 @@ public class CabInvoiceTest {
         double TotalFare = cabInvoiceGenerator.CalculateFare(0.1, 2);
         Assertions.assertEquals(5, TotalFare);
     }
+    @Test
+    void givenMultipleRides_ShouldCalculateAggregateTotal() {
+
+        Rides[] rides = {new Rides(1.0, 5, PrimiumRides.Normal),
+                new Rides(0.2, 2, PrimiumRides.Normal)};
+
+        CabInvoiceGenerator cabInvoiceGenerator = new CabInvoiceGenerator();
+        double totalFare = cabInvoiceGenerator.CalculateFare(rides);
+        Assertions.assertEquals(20, totalFare, 0.0);
+    }
 }
