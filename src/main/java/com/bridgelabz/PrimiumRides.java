@@ -5,18 +5,18 @@ public class PrimiumRides {
         public static final PrimiumRides PREMIUM = null;
         public static PrimiumRides Normal;
 
-        private final double costperkm;
-        private final double costpermin;
-        private final double minfare;
+        private final double costPerKm;
+        private final double costPerMin;
+        private final double minFare;
 
-        PrimiumRides(double costperkm, double costpermin, double minfare){
-                this.costperkm=costperkm;
-                this.costpermin=costpermin;
-                this.minfare=minfare;
+        PrimiumRides(double costPerKm, double costPerMin, double minFare){
+                this.costPerKm=costPerKm;
+                this.costPerMin=costPerMin;
+                this.minFare=minFare;
         }
 
         public double calcCostOfCabRide(Rides ride) {
-                double rideCost = ride.distance * costperkm + ride.time * costpermin;
+                double rideCost = ride.distance * costPerKm + ride.time * costPerMin;
                 return rideCost;
         }
 }
